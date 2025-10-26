@@ -1,0 +1,256 @@
+/* General Body Style */
+body {
+    margin: 0; 
+    font-family: 'Inter', sans-serif;
+    color: #e6d5b7;
+    background: linear-gradient(135deg, #1E223D, #000318);
+}
+
+.hero,
+.overview-section,
+.projects-section {
+    min-height: 100vh; 
+    background-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth ;
+}
+
+body > footer {
+    margin-top: auto;
+}
+
+.highlight-word {
+    color: #f54f1b;
+}
+
+.nav-logo a.highlight-word,
+.nav-links a.highlight-word {
+    color: #f54f1b;
+}
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+    color: #ffedab;
+}
+
+.nav-logo a,
+.nav-links a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #f0e6da;
+}
+
+.arrow {
+    border: solid #f0e6da;
+    border-width: 0 8px 8px 0;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 5px;
+  
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 40px;
+}
+
+.hero h1 {
+    font-size: 188px;
+    margin-bottom: 0.5px;
+    white-space: nowrap;
+}
+
+.hero p {
+    font-size: 30px;
+}
+
+.hero .arrow{
+    left: 40%;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    -webkit-transform: translateX(-50%) rotate(45deg);
+}
+
+.hero .arrow.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hero-content {
+    transform:translateY(-20%);
+}
+
+/* Overview */
+.overview-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 180px; /* Gap between carousel and intro */
+}
+
+.overview-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Gap between text, image and button */
+}
+
+.overview-intro img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+.overview-section .social {
+    display: flex;
+    gap: 10px; /* Gap between buttons */
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 12px 24px;
+
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+
+    border-radius: 8px;
+    border: none;
+    width: 80px;
+}
+
+.social-btn.linkedin {
+    background-color: #0A66C2;
+}
+
+.social-btn.github {
+  background-color: #333;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Gap between carousel and carousel arrow */
+}
+
+.carousel {
+    position: relative;
+}
+
+.carousel__item {
+    border-radius: 5px;
+    height: 700px;
+    width: 870px;
+    background: #f54f1b;
+    padding: 1rem;
+    color: #1b213e;
+    display: none;
+}
+
+.carousel__item--selected {
+    display: block;
+}
+
+.carousel__button {
+    cursor: pointer;
+}
+
+.arrow.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.arrow.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+/* Projects */
+
+.projects-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    padding: 10px 80px;
+}
+
+.project__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+.project__panel {
+    border-radius: 5px;
+    height: 700px;
+    width: 355px;
+    background: #f54f1b;
+    padding: 1rem;
+    color: #fff;
+}
+
+/* Footer */
+.contact-section {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+.contact-section p{
+    margin: 0;
+}
+
+.contact-section a{
+    text-decoration: none;
+    color: white; 
+}
+
+.copy-email {
+ padding: 18px   
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #f54f1b;
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin: 0 15px;
+}
+
+.social-icons a:hover {
+    color: #f0e6da;
+}
