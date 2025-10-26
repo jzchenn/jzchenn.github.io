@@ -1,3 +1,10 @@
+/* Variables */
+:root {
+    --mprimary-color: #1b213e;
+    --msecondary-color: #f54f1b;
+    --mtertiary-color: #e6d5b7;
+}
+
 /* General Body Style */
 
 body {
@@ -23,12 +30,12 @@ body > footer {
 }
 
 .highlight-word {
-    color: #f54f1b;
+    color: var(--msecondary-color);
 }
 
 .nav-logo a.highlight-word,
 .nav-links a.highlight-word {
-    color: #f54f1b;
+    color: var(--msecondary-color);
 }
 
 /* Navigation Bar */
@@ -52,18 +59,18 @@ body > footer {
     margin: 0;
     padding: 0;
     gap: 30px;
-    color: #ffedab;
+    color: var(--mtertiary-color);
 }
 
 .nav-logo a,
 .nav-links a {
     text-decoration: none;
     font-size: 30px;
-    color: #f0e6da;
+    color: var(--mtertiary-color);
 }
 
 .arrow {
-    border: solid #f0e6da;
+    border: solid var(--mtertiary-color);
     border-width: 0 8px 8px 0;
     display: inline-block;
     padding: 30px;
@@ -175,9 +182,9 @@ body > footer {
     border-radius: 5px;
     height: 700px;
     width: 870px;
-    background: #f54f1b;
+    background: var(--msecondary-color);
     padding: 1rem;
-    color: #1b213e;
+    color: var(--mprimary-color);
     display: none;
 }
 
@@ -221,7 +228,7 @@ body > footer {
     border-radius: 5px;
     height: 700px;
     width: 355px;
-    background: #f54f1b;
+    background: var(--msecondary-color);
     padding: 1rem;
     color: #fff;
 }
@@ -251,12 +258,12 @@ body > footer {
 }
 
 .social-icons a {
-    color: #f54f1b;
+    color: var(--msecondary-color);
     text-decoration: none;
     font-size: 1.8rem;
     margin: 0 15px;
 }
 
 .social-icons a:hover {
-    color: #f0e6da;
+    color: var(--mtertiary-color);
 }
