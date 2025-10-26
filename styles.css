@@ -1,4 +1,5 @@
 /* General Body Style */
+
 body {
     margin: 0; 
     font-family: 'Inter', sans-serif;
@@ -29,7 +30,9 @@ body > footer {
 .nav-links a.highlight-word {
     color: #f54f1b;
 }
+
 /* Navigation Bar */
+
 .navbar {
     display: flex;
     position: fixed;
@@ -69,6 +72,7 @@ body > footer {
 }
 
 /* Hero */
+
 .hero {
     position: relative;
     display: flex;
@@ -107,6 +111,7 @@ body > footer {
 }
 
 /* Overview */
+
 .overview-section {
     display: flex;
     align-items: center;
@@ -193,6 +198,7 @@ body > footer {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
+
 /* Projects */
 
 .projects-section {
