@@ -38,6 +38,15 @@ body > footer {
     color: var(--msecondary-color);
 }
 
+.arrow {
+    border: solid var(--mtertiary-color);
+    border-width: 0 8px 8px 0;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 5px;
+  
+}
+
 /* Navigation Bar */
 
 .navbar {
@@ -45,7 +54,7 @@ body > footer {
     position: fixed;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 1.25rem 2vw;
     top: 0;
     width: 100%;
     box-sizing: border-box;
@@ -58,24 +67,15 @@ body > footer {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 30px;
+    gap: 1.875rem;
     color: var(--mtertiary-color);
 }
 
 .nav-logo a,
 .nav-links a {
     text-decoration: none;
-    font-size: 30px;
+    font-size: clamp(1.125rem, 1rem + 1vw, 1.875rem);
     color: var(--mtertiary-color);
-}
-
-.arrow {
-    border: solid var(--mtertiary-color);
-    border-width: 0 8px 8px 0;
-    display: inline-block;
-    padding: 30px;
-    border-radius: 5px;
-  
 }
 
 /* Hero */
@@ -86,17 +86,17 @@ body > footer {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 40px;
+    padding-left: 2.5rem;
 }
 
 .hero h1 {
-    font-size: 188px;
+    font-size: clamp(3rem, 10vw, 11.75rem);
     margin-bottom: 0.5px;
     white-space: nowrap;
 }
 
 .hero p {
-    font-size: 30px;
+    font-size: clamp(1.125rem, 1rem + 1vw, 1.875rem);
 }
 
 .hero .arrow{
@@ -123,19 +123,19 @@ body > footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 180px; /* Gap between carousel and intro */
+    gap: 9vw; /* Gap between carousel and intro */
 }
 
 .overview-intro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Gap between text, image and button */
+    gap: 1vh; /* Gap between text, image and button */
 }
 
 .overview-intro img{
-    width: 300px;
-    height: 300px;
+    width: clamp(200px,16vw, 300px);
+    height: clamp(200px,16vw, 300px);
     border-radius: 50%;
     object-fit: cover;
     background-color: #eee;
@@ -148,16 +148,16 @@ body > footer {
 
 .social-btn {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 12px 1.25vw;
 
     color: #fff;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
 
     border-radius: 8px;
     border: none;
-    width: 80px;
+    width: 4vw;
 }
 
 .social-btn.linkedin {
@@ -171,7 +171,7 @@ body > footer {
 .carousel-container {
     display: flex;
     align-items: center;
-    gap: 40px; /* Gap between carousel and carousel arrow */
+    gap: 2vw; /* Gap between carousel and carousel arrow */
 }
 
 .carousel {
@@ -180,8 +180,8 @@ body > footer {
 
 .carousel__item {
     border-radius: 5px;
-    height: 700px;
-    width: 870px;
+    height: clamp( 400px ,75vh, 810px);
+    width: clamp(600px, 45vw, 860px);
     background: var(--msecondary-color);
     padding: 1rem;
     color: var(--mprimary-color);
@@ -214,7 +214,7 @@ body > footer {
     justify-content: center;
     flex-direction: column;
     width: 90%;
-    padding: 10px 80px;
+    padding: 10px 4.2vw;
 }
 
 .project__container{
@@ -226,8 +226,8 @@ body > footer {
 }
 .project__panel {
     border-radius: 5px;
-    height: 700px;
-    width: 355px;
+    height: clamp(645px, 65vh, 700px);
+    width: clamp(300px, 18vw, 355px);
     background: var(--msecondary-color);
     padding: 1rem;
     color: #fff;
@@ -238,6 +238,8 @@ body > footer {
     padding: 30px 0;
     text-align: center;
     font-size: 25px;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-section p{
