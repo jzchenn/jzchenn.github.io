@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Carousel
+    /* Carousel
     document.querySelectorAll(".carousel-container").forEach(container => {
         const carousel = container.querySelector(".carousel");
         const items = carousel.querySelectorAll(".carousel__item");
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 nextItem.classList.add("carousel__item--selected");
             });
         } 
-    });
+    }); */
     // ScrollSpy
 
     let section = document.querySelectorAll('section, footer[id]');

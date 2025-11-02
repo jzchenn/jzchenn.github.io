@@ -117,20 +117,20 @@ body > footer {
     transform:translateY(-20%);
 }
 
-/* Overview */
+/* Overview 
 
 .overview-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 9vw; /* Gap between carousel and intro */
+    gap: 9vw; 
 }
 
 .overview-intro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1vh; /* Gap between text, image and button */
+    gap: 1vh;
 }
 
 .overview-intro img{
@@ -143,7 +143,7 @@ body > footer {
 
 .overview-section .social {
     display: flex;
-    gap: 10px; /* Gap between buttons */
+    gap: 10px;
 }
 
 .social-btn {
@@ -171,7 +171,7 @@ body > footer {
 .carousel-container {
     display: flex;
     align-items: center;
-    gap: 2vw; /* Gap between carousel and carousel arrow */
+    gap: 2vw; 
 }
 
 .carousel {
@@ -204,7 +204,7 @@ body > footer {
 .arrow.right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-}
+} */
 
 /* Projects */
 
@@ -233,6 +233,22 @@ body > footer {
     color: #fff;
 }
 
+.projects-section img {
+    width: 296px;
+    height: 206px;
+    border-radius: 5px;
+}
+
+.projects-section .social-icons a {
+    color: var(--mtertiary-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.projects-section .social-icons a:hover {
+    color: var(--mprimary-color);
+}
+
 /* Footer */
 .contact-section {
     padding: 30px 0;
@@ -255,17 +271,17 @@ body > footer {
  padding: 18px   
 }
 
-.social-icons {
+.contact-section .social-icons {
     margin-bottom: 20px;
 }
 
-.social-icons a {
+.contact-section .social-icons a {
     color: var(--msecondary-color);
     text-decoration: none;
     font-size: 1.8rem;
     margin: 0 15px;
 }
 
-.social-icons a:hover {
+.contact-section .social-icons a:hover {
     color: var(--mtertiary-color);
 }
