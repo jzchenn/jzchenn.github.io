@@ -221,6 +221,19 @@ body > footer {
     transform:translateY(-20%);
 }
 
+/* ------------- Hero Mobile Support ------------- */
+
+@media (max-width: 768px){
+    .hero {
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .hero p, .hero h1 {
+        text-align: center;
+    }
+}
+
 /* ------------- Overview -------------
 
 .overview-section {
