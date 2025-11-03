@@ -1,5 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-    /* Carousel
+    // ------------- Delay Function -------------
+    function debounce(func, delay = 100) {
+        let timer;
+        return function(...args) {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                func.apply(this, args);
+            }, delay);
+        };
+    }
+    /* ------------- Carousel -------------
     document.querySelectorAll(".carousel-container").forEach(container => {
         const carousel = container.querySelector(".carousel");
         const items = carousel.querySelectorAll(".carousel__item");
@@ -29,22 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         } 
     }); */
-    // ScrollSpy
+    // ------------- ScrollSpy -------------
 
     let section = document.querySelectorAll('section, footer[id]');
     let navLinks = document.querySelectorAll('nav a');
     let heroArrow = document.querySelector('.hero .arrow');
-
-    window.onscroll = () =>{    
+    
+    function scrollSpyLogic(){
         let currentActiveId = '';
         let top = window.scrollY;
-
-        if (top > 50){
-            heroArrow.classList.add("hidden")
-        }
-        else{
-            heroArrow.classList.remove("hidden")
-        }
 
         section.forEach((sec, index) =>{
             let offset = sec.offsetTop - 150;
@@ -70,6 +73,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             })
     }
+    const debouncedScrollSpy = debounce(scrollSpyLogic, 100);
+    window.onscroll = () => {
+        if (window.scrollY > 50){
+            heroArrow.classList.add("hidden")
+        }
+        else{
+            heroArrow.classList.remove("hidden")
+        }
+        debouncedScrollSpy();
+    }
     
+    // ------------- Hamburger Animation -------------
+    $(function(){
+        $('.hamburger-menu').on('click', function() {
+            $(this).closest('.navbar').toggleClass('active'); 
+        });
+    });
 
 });

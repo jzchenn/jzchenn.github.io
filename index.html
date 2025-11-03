@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
     <!--Navigation Bar-->
@@ -24,6 +25,10 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
+
+            <button class="hamburger-menu">
+                <span></span>
+            </button>
         </nav>
     <!--Hero-->
     <section class="hero" id="hero">
@@ -73,30 +78,6 @@
     <section class="projects-section" id="projects">
         <h1>Projects</h1>
         <div class="project__container">
-            <div class="project__panel">
-                <div class="project__panel-content">
-                    <img src="imgs/IT-Service-Portal.PNG">
-                    <h2>IT Service Portal</h2>
-                    <p>IT Service Portal is a XAML desktop tool designed to manage and track user support requests in a simulated school environment, built using C# and SQL. The application effciently stores user and ticket information via a structured database schema.</p>
-                </div>
-                <div class="social-icons">
-                    <a href="https://github.com/jzchenn/IT-Service-Portal" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="project__panel">
-                <div class="project__panel-content">
-                    <img src="imgs/Flappy-Box.png">
-                    <h2>Flappy Box</h2>
-                    <p>Flappy Box is a graphical arcade game clone engineered in Python, utilizing physics-based bird movement, collision detection, and a dynamic scoring system to replicate the core mechanics of the classic game.</p>
-                </div>
-                <div class="social-icons">
-                    <a href="https://github.com/jzchenn/Flappy-Box" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
             <!-- FOR COPY AND PASTE 
             <div class="project__panel">
                 <div class="project__panel-content">
@@ -111,6 +92,30 @@
                 </div>
             </div>
             -->
+            <div class="project__panel">
+                <div class="project__panel-content">
+                    <img src="imgs/IT-Service-Portal.PNG">
+                    <h2>TicketPortal</h2>
+                    <p>TicketPortal is a NCEA Level 3 Internal assessed XAML desktop tool designed to manage and track user support requests in a simulated school environment, built using C# and SQL. The application effciently stores user and ticket information via a structured database schema.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/jzchenn/IT-Service-Portal" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project__panel">
+                <div class="project__panel-content">
+                    <img src="imgs/Flappy-Box.png">
+                    <h2>FlappyBox</h2>
+                    <p>FlappyBox is a NCEA Level 3 Internal assessed graphical arcade game clone engineered in Python, utilizing physics-based bird movement, collision detection, and a dynamic scoring system to replicate the core mechanics of the classic game.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/jzchenn/Flappy-Box" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
     <!--Contact Me-->
