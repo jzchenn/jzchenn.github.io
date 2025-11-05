@@ -9,38 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }, delay);
         };
     }
-    /* ------------- Carousel -------------
-    document.querySelectorAll(".carousel-container").forEach(container => {
-        const carousel = container.querySelector(".carousel");
-        const items = carousel.querySelectorAll(".carousel__item");
-        const buttonLeft = container.querySelector(".carousel__button.left");
-        const buttonRight = container.querySelector(".carousel__button.right");
-
-        if (buttonLeft) {
-            buttonLeft.addEventListener("click", () => {
-                const currentItem = carousel.querySelector(".carousel__item--selected")
-                currentItem.classList.remove("carousel__item--selected");
-                let prevItem = currentItem.previousElementSibling;
-                if (!prevItem || !prevItem.classList.contains("carousel__item")) {
-                    prevItem = items[items.length - 1];
-                }
-                prevItem.classList.add("carousel__item--selected");
-            });
-        }
-        if (buttonRight) {
-            buttonRight.addEventListener("click", () => {
-                const currentItem = carousel.querySelector(".carousel__item--selected")
-                currentItem.classList.remove("carousel__item--selected");
-                let nextItem = currentItem.nextElementSibling;
-                if (!nextItem || !nextItem.classList.contains("carousel__item")) {
-                    nextItem = items[0];
-                }
-                nextItem.classList.add("carousel__item--selected");
-            });
-        } 
-    }); */
     // ------------- ScrollSpy -------------
-
     let section = document.querySelectorAll('section, footer[id]');
     let navLinks = document.querySelectorAll('nav a');
     let heroArrow = document.querySelector('.hero .arrow');
@@ -83,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         debouncedScrollSpy();
     }
-    
     // ------------- Hamburger Animation -------------
     $(function(){
         $('.hamburger-menu').on('click', function() {

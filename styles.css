@@ -15,7 +15,7 @@ body {
 }
 
 .hero,
-.overview-section,
+.education-section,
 .projects-section {
     min-height: 100vh; 
     background-color: transparent;
@@ -234,95 +234,133 @@ body > footer {
     }
 }
 
-/* ------------- Overview -------------
+/* ------------- Education ------------- */
 
-.overview-section {
+.education-section {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 9vw; 
-}
-
-.overview-intro {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1vh;
-}
-
-.overview-intro img{
-    width: clamp(200px,16vw, 300px);
-    height: clamp(200px,16vw, 300px);
-    border-radius: 50%;
-    object-fit: cover;
-    background-color: #eee;
-}
-
-.overview-section .social {
-    display: flex;
-    gap: 10px;
-}
-
-.social-btn {
-    display: inline-block;
-    padding: 12px 1.25vw;
-
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1rem;
-
-    border-radius: 8px;
-    border: none;
-    width: 4vw;
-}
-
-.social-btn.linkedin {
-    background-color: #0A66C2;
-}
-
-.social-btn.github {
-  background-color: #333;
-}
-
-.carousel-container {
-    display: flex;
-    align-items: center;
-    gap: 2vw; 
-}
-
-.carousel {
+    padding-top: 60px;
     position: relative;
 }
 
-.carousel__item {
-    border-radius: 5px;
-    height: clamp( 400px ,75vh, 810px);
-    width: clamp(600px, 45vw, 860px);
-    background: var(--msecondary-color);
-    padding: 1rem;
-    color: var(--mprimary-color);
-    display: none;
+.education-section .timeline-content h2 {
+    margin: 0;
 }
 
-.carousel__item--selected {
-    display: block;
+.timeline-container {
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+
+    --dot-size: 60px;
+    --dot-top-offset: 20%;
+    --dot-vertical-center: calc(var(--dot-top-offset) + (var(--dot-size) / 2));
+    --arrow-and-date-top: calc(var(--dot-vertical-center) - 10px);
+    --horizontal-padding: calc(var(--dot-size) + 10px);
+    --date-margin: var(--dot-size);
+
+}
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    background-color: color-mix(in srgb, var(--mprimary-color) 85%, white);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.carousel__button {
-    cursor: pointer;
+.timeline-item {
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 50px;
 }
 
-.arrow.left {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
+.timeline-content {
+    padding: 20px;
+    background-color: #2a2a4e;
+    border-radius: 8px;
+    position: relative;
 }
 
-.arrow.right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-} */
+.timeline-dot {
+    position: absolute;
+    width: var(--dot-size);
+    height: var(--dot-size);
+    border-radius: 50%;
+    border: 3px solid color-mix(in srgb, var(--mprimary-color) 85%, white);
+    background-color: #fff;
+    object-fit: cover;
+    top: var(--dot-top-offset);
+    z-index: 10;
+}
 
+.timeline-date {
+    position: absolute;
+    top: var(--arrow-and-date-top);
+    font-weight: bold;
+    color: #aaa;
+    white-space: nowrap;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: var(--horizontal-padding);
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    left: 100%;
+    transform: translateX(-50%);
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    left: 100%;
+    margin-left: var(--date-margin);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: var(--arrow-and-date-top);
+    right: -10px;
+
+    border-width: 10px 0 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #2a2a4e;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: var(--horizontal-padding);
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    right: 100%;
+    margin-right: var(--date-margin);
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: var(--arrow-and-date-top);
+    left: -10px;
+
+    border-width: 10px 10px 10px 0;
+    border-style: solid;
+    border-color: transparent #2a2a4e transparent transparent;
+}
 /* ------------- Projects ------------- */
 
 .projects-section {
