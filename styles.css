@@ -249,14 +249,18 @@ body > footer {
 }
 
 .timeline-container {
-    position:absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 900px;
+    
+    position: relative;
+    top: auto;
+    transform: none;
+    max-width: 90vw;
     width: 100%;
     box-sizing: border-box;
+    height: 80vh;
+    margin-top: 80px;
+    margin-bottom: 80px;
 
-    --dot-size: 60px;
+    --dot-size: clamp( 30px , 10.8vh, 100px);
     --dot-top-offset: 20%;
     --dot-vertical-center: calc(var(--dot-top-offset) + (var(--dot-size) / 2));
     --arrow-and-date-top: calc(var(--dot-vertical-center) - 10px);
@@ -268,7 +272,7 @@ body > footer {
     content: '';
     position: absolute;
     width: 5px;
-    background-color: color-mix(in srgb, var(--mprimary-color) 85%, white);
+    background-color: var(--mtertiary-color);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -279,14 +283,16 @@ body > footer {
     position: relative;
     width: 50%;
     box-sizing: border-box;
-    margin-bottom: 50px;
+    margin-bottom: 20vh; /* Adjust gap between the dots */
 }
 
 .timeline-content {
+    margin-top: 10px;
     padding: 20px;
-    background-color: #2a2a4e;
+    background-color: var(--msecondary-color);
     border-radius: 8px;
     position: relative;
+    color: var(--mprimary-color);
 }
 
 .timeline-dot {
@@ -294,7 +300,7 @@ body > footer {
     width: var(--dot-size);
     height: var(--dot-size);
     border-radius: 50%;
-    border: 3px solid color-mix(in srgb, var(--mprimary-color) 85%, white);
+    border: 8px solid var(--mtertiary-color);
     background-color: #fff;
     object-fit: cover;
     top: var(--dot-top-offset);
@@ -305,7 +311,7 @@ body > footer {
     position: absolute;
     top: var(--arrow-and-date-top);
     font-weight: bold;
-    color: #aaa;
+    color: var(--mtertiary-color);
     white-space: nowrap;
 }
 
@@ -332,7 +338,7 @@ body > footer {
 
     border-width: 10px 0 10px 10px;
     border-style: solid;
-    border-color: transparent transparent transparent #2a2a4e;
+    border-color: transparent transparent transparent var(--msecondary-color);
 }
 
 .timeline-item:nth-child(even) {
@@ -359,8 +365,28 @@ body > footer {
 
     border-width: 10px 10px 10px 0;
     border-style: solid;
-    border-color: transparent #2a2a4e transparent transparent;
+    border-color: transparent var(--msecondary-color) transparent transparent;
 }
+
+/* ------------- Education Mobile Support ------------- */
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-height: 877px) {
+
+    .timeline-container {
+        position: relative;
+        top: auto;
+        transform: none;
+
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+}
+
 /* ------------- Projects ------------- */
 
 .projects-section {
