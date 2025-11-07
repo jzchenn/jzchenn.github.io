@@ -373,17 +373,21 @@ body > footer {
 
 @media (max-width: 768px) {
     .timeline-container {
-        --timeline-margin: 10%;
+        --timeline-margin: 15%;
         --content-padding: calc(var(--timeline-margin) + 70px);
         --content-box: 60vw;
 
         --mobile-dot-top: 40px;
-        --mobile-arrow-offset: 45px;
+        --mobile-arrow-size: 8px;
+        --mobile-arrow-height: calc(var(--mobile-arrow-size) * 2)
     }
     .timeline-content {
         width: var(--content-box);
         box-sizing: border-box;
         font-size: 12px;
+        position: relative;
+        top: var(--mobile-dot-top);
+        margin-top: 0;
     }
     .timeline-container::before {
         left: var(--timeline-margin);
@@ -411,14 +415,15 @@ body > footer {
         right: auto;
         border-width: 10px 10px 10px 0;
         border-color: transparent var(--msecondary-color) transparent transparent;
-        top: calc(var(--mobile-dot-top) + var(--mobile-arrow-offset) );
+        top: var(--mobile-dot-top);
     }
 
     .timeline-item .timeline-date,
     .timeline-item:nth-child(even) .timeline-date, 
     .timeline-item:nth-child(odd) .timeline-date {
         position: relative;
-        top: auto;
+        top: var(--mobile-dot-top);
+        transform: none;
         left: auto;
         right: auto;
         width: var(--content-box);
