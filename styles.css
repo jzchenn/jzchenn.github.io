@@ -376,6 +376,9 @@ body > footer {
         --timeline-margin: 10%;
         --content-padding: calc(var(--timeline-margin) + 70px);
         --content-box: 60vw;
+
+        --mobile-dot-top: 40px;
+        --mobile-arrow-offset: 45px;
     }
     .timeline-content {
         width: var(--content-box);
@@ -399,15 +402,16 @@ body > footer {
     .timeline-item:nth-child(even) .timeline-dot {
         left: var(--timeline-margin);
         transform: translateX(-50%);
-        top: 40px;
+        top: var(--mobile-dot-top);
     }
 
-    .timeline-item:nth-child(odd) .timeline-content::before {
+    .timeline-item:nth-child(odd) .timeline-content::before,
+    .timeline-item:nth-child(even) .timeline-content::before {
         left: -10px;
         right: auto;
         border-width: 10px 10px 10px 0;
         border-color: transparent var(--msecondary-color) transparent transparent;
-        top: 55px;
+        top: calc(var(--mobile-dot-top) + var(--mobile-arrow-offset) );
     }
 
     .timeline-item .timeline-date,
